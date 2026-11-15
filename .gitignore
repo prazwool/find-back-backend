@@ -1,0 +1,11 @@
+# Dependencies and local configuration
+node_modules/
+.env
+.env.*
+!.env.example
+# Uploaded user images and generated reports
+uploads/*
+!uploads/.gitkeep
+coverage/
+*.log
+.DS_Store
