@@ -13,3 +13,11 @@ REST API for the **FindBack — Lost & Found** MERN application.
 npm install
 npm run seed
 npm run dev
+```
+
+API runs on `http://localhost:5000/api`.
+
+## Demo Accounts
+
+- `demo@findback.dev` / `Demo12345!`
+- `visitor@findback.dev` / `Demo12345!`
