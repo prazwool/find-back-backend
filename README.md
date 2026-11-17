@@ -7,6 +7,7 @@ REST API for the **FindBack — Lost & Found** MERN application.
 ## Quick Start
 
 1. Copy `.env.example` to `.env` and set your `JWT_SECRET` and `MONGODB_URI`.
+   Set `CORS_ORIGIN` to a comma-separated list when allowing more than one frontend origin, for example `http://localhost:5173,https://app.example.com`.
 2. Run:
 
 ```bash

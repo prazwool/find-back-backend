@@ -14,7 +14,10 @@ import { notFound, errorHandler } from './middleware/errors.js';
 const app = express();
 app.disable('x-powered-by');
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
-const origins = (process.env.CLIENT_ORIGIN || 'http://localhost:5173').split(',').map((s) => s.trim());
+const origins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 app.use(cors({ origin(origin, cb) { if (!origin || origins.includes(origin)) cb(null, true); else cb(new Error('Origin not allowed.')); } }));
 app.use(express.json({ limit: '100kb' }));
 if (process.env.NODE_ENV !== 'test') app.use(morgan('dev'));
